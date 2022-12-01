@@ -12,3 +12,13 @@ dict1:
 - Accept addresses from stdin, search the list for all matching records and print them to the output file. You may assume that all queries will be terminated by a new line to allow for the querying of footpaths without an address. If no matches for the query are found, your program should output NOTFOUND.
 
 - In addition to outputting the record(s) to the output file, the number of records found should be output to stdout.
+
+dict2:
+
+- Construct a sorted array which contains pointers to each node in the dataset. This should be sorted on the grade1in attribute, which will be the 6th index (0-based).
+
+- Accept double type values from stdin, search the index for the closest record to that value and print it to the output file. The closest point is defined by the absolute difference between the search value and the dataset value.
+
+- In addition to outputting the record(s) to the output file, the grade1in value of the record found should be output to stdout.
+
+
