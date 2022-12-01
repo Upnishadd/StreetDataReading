@@ -1,0 +1,18 @@
+
+./dict1 1 tests/dataset_2.csv output.out < tests/test2.s1.in > output.stdout.out
+
+
+./dict2 2 tests/dataset_1000.csv output.out < tests/test1000.s2.in > output.stdout.out
+
+LD_PRELOAD=
+valgrind --leak-check=full --show-leak-kinds=all ./dict1 1 tests/dataset_20.csv output.out < tests/test20.s1.in > output.stdout.out 2> valgrind_out.txt 
+
+valgrind --leak-check=full --show-leak-kinds=all ./dict2 2 tests/dataset_20.csv output.out < tests/test20.s2.in > output.stdout.out 2> valgrind_out.txt 
+
+valgrind --leak-check=full --show-leak-kinds=all ./dict2 2 tests/dataset_1000.csv output.out < tests/test1000.s2.in > output.stdout.out 2> valgrind_out.txt 
+
+valgrind --leak-check=full --show-leak-kinds=all ./qStud 2 small.csv small-info.txt < small-in.txt > small-out.txt 2> valgrind_out.txt 
+
+valgrind --leak-check=full --show-leak-kinds=all ./qStud 2 data_file_name output_info_file_name 2> valgrind_out.txt
+
+valgrind --leak-check=full --show-leak-kinds=all ./qStud 3 small.csv 2> valgrind_out.txt
